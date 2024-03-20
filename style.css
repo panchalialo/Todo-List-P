@@ -1,0 +1,134 @@
+/* Setting the background colour of body of html DOM*/
+body {
+    background: rgb(159, 201, 224);
+    background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%, rgb(7, 0, 0) 100%, rgba(190, 89, 109, 0.2389791227548692) 100%);
+}
+
+/* Where a user will enter the task that needs to be done */
+.inputField {
+    font-style: italic;
+    
+    width: 100%;
+    margin: 20px auto; /* Center the input field horizontally and add some space at the top */
+    padding: 10px; /* Add padding to give some space inside the input field */
+    box-shadow: 5px 5px 10px lightblue; /* Add a box shadow with a color */
+}
+
+
+
+#exampleInput {
+    font-size: 20px;
+    color: red;
+    width: 100%; /* Make the input field take up 100% of the container width */
+    height: 40px; /* Adjust the height to your preference */
+    border: 1px solid #ccc; /* Add a border for better visibility */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+/* Add button that will appear to the right of our input field */
+.Addbutton{
+    width: 57px; 
+    height: 57px; 
+    
+}
+
+
+.inputField {
+    position: relative;
+}
+
+/* Things that will be shown in to do list */
+.leftText {
+    display: inline;
+    font-size: 15px;
+}
+
+.middleText {
+    display: inline;
+    /* margin-left: 10%; */
+    font-size: 26px;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+}
+
+.activityDone{
+    width: 40px;
+    height: 40px;
+    margin-left: 15%;
+}
+
+.checkBox{
+    float: right;
+    width: 35px;
+    height: 34px;
+    
+}
+
+.rightImage {
+    float: right;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;    
+}
+
+/* This will indicate the number of task remaining */
+.displayTaskRem{
+    font-style: italic;
+    position: fixed;
+    top: 100px;
+    
+    color: rgb(7, 0, 0);
+    font-size: 20px
+}
+
+@media screen and (max-width: 700px) {
+
+    #addButton {
+        position: fixed;
+        right: 0;
+        z-index: 9999;
+        margin-right: 0%;
+        width: 50px; 
+        height: 60px;
+        
+        /* Other styles */
+    }
+    
+
+    #taskCount{
+        display: none;
+    }
+
+    .inputField{
+        width: 100%;
+        margin-left: 0%;
+        padding-left: 0%;
+        
+    }
+}
+
+
+/* Define the fade-out animation */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        display: none; /* Optionally hide the element after fading out */
+    }
+}
+
+/* Apply the animation to the task item */
+.fadeOut {
+    animation: fadeOut 0.5s ease-in-out; /* Adjust the duration and easing as needed */
+}
+
+
+#containerList {
+    width: 100%;
+    margin: 0%; 
+    
+}
+
